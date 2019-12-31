@@ -886,6 +886,10 @@ section {
     width: 160px;
 }
 
+.rs-select2--lg {
+    width: 200px;
+}
+
 .select2-container {
     display: block;
     max-width: 100% !important;
@@ -1399,6 +1403,7 @@ section {
 
 .account-wrap {
     position: relative;
+    right: -1600px;
 }
 
 .account-item {
@@ -14648,4 +14653,8 @@ section {
 
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
+}
+
+.time-button {
+    right: -1000px;
 }

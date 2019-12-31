@@ -33,11 +33,46 @@
     
     <body class="animsition">
         <div class="page-wrapper">
+             <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+                <div class="header-mobile__bar">
+                    <div class="container-fluid">
+                        <div class="header-mobile-inner">
+                            <a class="logo" href="index.html">
+                                <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            </a>
+                            <button class="hamburger hamburger--slider" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar-mobile">
+                    <div class="container-fluid">
+                        <ul class="navbar-mobile__list list-unstyled">
+                            <li>
+                                <a href="home.html">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chart.html">
+                                    <i class="fas fa-chart-bar"></i>Charts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- END HEADER MOBILE-->
+    
+
             <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
+            <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                    <img src="images/icon/dligt-logo-up.png" alt="D.Light" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -49,7 +84,7 @@
                         </li>
                         <li>
                             <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Dashboard In Depth View</a>
+                                <i class="fas fa-chart-bar"></i>Dashboard Analysis</a>
                         </li>
                     </ul>
                 </nav>
@@ -71,7 +106,7 @@
                                             <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#">Ian Irungu</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -82,9 +117,9 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#">Ian Irungu</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">Ian.Irungu@boychild.com</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -95,10 +130,6 @@
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
                                                         <i class="zmdi zmdi-settings"></i>Setting</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
@@ -126,10 +157,146 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row m-t-25">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-long-arrow-up"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>100,000</h2>
+                                                <span>Amount spent</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                                <canvas id="widgetChart1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c2">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-long-arrow-down"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>223,467</h2>
+                                                <span>Amount received</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c3">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-shopping-cart"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>20,674</h2>
+                                                <span>Avg Monthly Spending</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c4">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-money"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>35,767</h2>
+                                                <span>Avg Monthly Income</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart4"></canvas>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="au-card chart-percent-card">
+                                    <div class="au-card-inner">
+                                            <h3 class="title-2 tm-b-5">Number of Transactions</h3>
+                                            <div class="row no-gutters">
+                                                <div class="col-xl-6">
+                                                    <div class="chart-note-wrap">
+                                                        <div class="chart-note mr-0 d-block">
+                                                            <span class="dot dot--blue"></span>
+                                                            <span>Paid In</span>
+                                                        </div>
+                                                        <div class="chart-note mr-0 d-block">
+                                                            <span class="dot dot--red"></span>
+                                                            <span>Withdrawn</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="percent-chart">
+                                                        <canvas id="percent-chart"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                            </div>
+                            <div class="col-lg-6">
+                                    <div class="au-card recent-report">
+                                        <div class="au-card-inner">
+                                            <h3 class="title-2">recent reports</h3>
+                                            <div class="chart-info">
+                                                <div class="chart-info__left">
+                                                    <div class="chart-note">
+                                                        <span class="dot dot--blue"></span>
+                                                        <span>Paid In</span>
+                                                    </div>
+                                                    <div class="chart-note mr-0">
+                                                        <span class="dot dot--green"></span>
+                                                        <span>Withdrawn</span>
+                                                    </div>
+                                                </div>
+                                                <div class="chart-info__right">
+                                                    <div class="chart-statis">
+                                                        <span class="index incre">
+                                                            <i class="zmdi zmdi-long-arrow-down"></i>25%</span>
+                                                        <span class="label">Paid In</span>
+                                                    </div>
+                                                    <div class="chart-statis mr-0">
+                                                        <span class="index decre">
+                                                            <i class="zmdi zmdi-long-arrow-up"></i>10%</span>
+                                                        <span class="label">Withdrawn</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="recent-report__chart">
+                                                <canvas id="recent-rep-chart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+    </div>
 
         <!-- Jquery JS-->
         <script src="vendor/jquery-3.2.1.min.js"></script>
