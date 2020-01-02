@@ -1402,8 +1402,8 @@ section {
 }
 
 .account-wrap {
-    position: relative;
-    right: -1600px;
+    position: absolute;
+    right: 50px;
 }
 
 .account-item {
@@ -14656,5 +14656,5 @@ section {
 }
 
 .time-button {
-    right: -1000px;
+    right: -400px;
 }
